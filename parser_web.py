@@ -9,8 +9,10 @@ class Parser(HTMLParser):
         self.recording = False
 
     def handle_starttag(self, tag, attrs):
-        if tag == "title":
+        if tag == "ul":
             self.recording = True
+            for attr in attrs:
+                print("     attr:", attr)
         else:
             self.recording = False
             
@@ -21,10 +23,10 @@ class Parser(HTMLParser):
 
 
 def main(argv):
-    print(argv)
+    #print(argv)
     f = codecs.open(argv, 'r')
     doc = f.read()
-    print(doc)
+    #print(doc)
 
     p = Parser()
     p.feed(doc)
