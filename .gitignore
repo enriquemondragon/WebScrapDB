@@ -1,3 +1,5 @@
 /venv_webscrap
 notes.txt
 XPathcmds.sh
+bookstore/bookstore/__pycache__/
+bookstore/bookstore/spiders/__pycache__/

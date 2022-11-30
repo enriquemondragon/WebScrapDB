@@ -1,10 +1,21 @@
 import scrapy
+import os
 
+dir = os.environ['BOOKS']
+url =[]
+print('Searching webpages in: ', dir)
+for root, dirs, files in os.walk(dir):
+    for file in files:
+        if file.endswith('.html'):
+            url.append(dir + '/' + file)
+print('Webpages are: ', url)
 
 class BookSpider(scrapy.Spider):
     name = 'book'
     allowed_domains = ['books.toscrape.com']
-    start_urls = ['http://books.toscrape.com/catalogue/category/books_1/index.html']
+    #start_urls = ['http://books.toscrape.com/catalogue/category/books_1/index.html']
+    
+    start_urls = [f'file://{url[0]}']
 
     def parse(self, response):
         # Find book names
