@@ -21,8 +21,7 @@ In this project the spider [book](bookstore/bookstore/spiders/book.py) extracts 
     $ chmod +x RunSpider.sh
     $ ./RunSpider.sh
 ```
-- Once with the relevant information saved in a (.csv) file we can load it with MySQL and manipulate it. Here are some sample [queries]
-(https://github.com/enriquemondragon/WebScrapDB/tree/main/sql_scripts).
+- Once with the relevant information saved in a (.csv) file we can load it with MySQL and manipulate it. Here are some [sample queries](https://github.com/enriquemondragon/WebScrapDB/tree/main/sql_scripts).
 
 --------
 ## Author
